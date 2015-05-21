@@ -1,0 +1,80 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+.progress.leftround  {
+	border-top-left-radius: 1000px;
+	border-bottom-left-radius: 1000px;
+}
+.progress.leftround .meter {
+	border-top-left-radius: 999px;
+	border-bottom-left-radius: 999px;
+}
+.progress.rightround  {
+	border-top-right-radius: 1000px;
+	border-bottom-right-radius: 1000px;
+}
+.progress.rightround .meter {
+	border-top-right-radius: 999px;
+	border-bottom-right-radius: 999px;
+}
+.progress {
+	background-color: #525252 !important;
+	padding: 1px !important;
+	font-size: .75em;
+	text-align: center;
+	overflow:show;
+	white-space: nowrap;
+	text-indent: 2em;
+}
+.progress-timer{
+	position: absolute !important;
+	background-color: transparent !important;
+	width: 100% !important;
+	text-align: center;
+	color: #ffffff;
+}
+
+.progress .meter{
+	color: #ffffff;
+	font-weight: bold;
+}
+.brewprogress {
+	font-size: .75em;
+	text-align: left;
+	font-weight: bold;
+	text-indent: 1em;
+}
+.brewprogress span{
+	text-indent: 1em;
+}
+.ingredient div {
+	font-weight: bold;
+	position: relative;
+	z-index: 1;
+}
+.ingredientadd ,.ingredientremove{	
+	z-index: 2;
+}
+.strikethrough {
+  position: relative;
+}
+.strikethrough:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 50%;
+  right: 0;
+  border-top: 4px solid #000000 !important;
+  border-color: inherit;
+
+  -webkit-transform:rotate(-5deg);
+  -moz-transform:rotate(-5deg);
+  -ms-transform:rotate(-5deg);
+  -o-transform:rotate(-5deg);
+  transform:rotate(-5deg);
+}

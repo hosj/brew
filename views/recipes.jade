@@ -1,0 +1,92 @@
+extends layout
+block content
+	.row
+		.large-12.columns
+			a.button.right.tiny(data-reveal-id="addRecipe") New Recipe 	
+			table#recipes(style="width: 100%")
+				tr
+					th Name
+					th Style
+					th OG
+					th FG
+					th IBU
+					th ABV
+					th Color
+					th Brewed
+					th Type
+					th Delete
+	#addRecipe.reveal-modal.small(data-reveal)
+		
+			
+	
+		ul.tabs(data-tab='', role='tablist')
+			li.tab-title.active(role='presentational')
+				a(href='#panel2-1', role='tab', tabindex='0', aria-selected='true', controls='panel2-1') Recipe Info
+			li.tab-title(role='presentational')
+				a(href='#panel2-2', role='tab', tabindex='0', aria-selected='false', controls='panel2-2') Fermentables
+			li.tab-title(role='presentational')
+				a(href='#panel2-3', role='tab', tabindex='0', aria-selected='false', controls='panel2-3') Hops
+			li.tab-title(role='presentational')
+				a(href='#panel2-4', role='tab', tabindex='0', aria-selected='false', controls='panel2-4') Yeast
+			.tabs-content
+				section#panel2-1.content.active(role='tabpanel', aria-hidden='false')
+					h2 Recipe Info
+					fieldset
+						.row.small-12.columns
+							.small-2.columns
+								label.right.inline(for='inputName') Name:
+							.small-10.columns 
+								input#inputRecipeName(type='text', placeholder='Name Your Recipe')
+						.row.small-12.columns
+							.small-2.columns
+								label.right.inline(for='inputStyle') Style:
+							.small-10.columns
+								input#inputRecipeStyle(type='text', placeholder='Style of your beer')
+						.row.small-12.columns
+							.small-2.columns
+								label.right.inline(for='inputOG') OG:
+							.small-4.columns
+								input#inputRecipeOG(type='text', placeholder='#.###')
+							.small-2.columns
+								label.right.inline(for='inputFG') FG:
+							.small-4.columns
+								input#inputRecipeFG(type='text', placeholder='#.###')
+						.row.small-12.columns
+							.small-2.columns
+								label.right.inline(for='inputIBU') IBU:
+							.small-2.columns
+								input#inputRecipeIBU(type='text', placeholder='##')
+							.small-2.columns
+								label.right.inline(for='inputABV') ABV:
+							.small-2.columns
+								input#inputRecipeABV(type='text', placeholder='##')
+							.small-2.columns
+								label.right.inline(for='inputColor') Color:
+							.small-2.columns
+								input#inputRecipeColor(type='text', placeholder='##')
+				section#panel2-2.content(role='tabpanel', aria-hidden='true')
+					h2 Fermentables
+					a#addFermentablea(data-reveal-id="fermentables") Add
+					table#fermentables
+						tr
+							th Amount
+							th Name
+							th Maltster
+							th Use??
+							th PPG
+							th Color
+						
+				section#panel2-3.content(role='tabpanel',  -hidden='true')
+					h2 Hops
+				section#panel2-4.content(role='tabpanel', aria-hidden='true')
+					h2 Yeast
+
+		button#btnAddRecipe.right Add Recipe
+		a.close-reveal-modal &#215;
+	
+	
+	
+	#fermentables.reveal-modal.small(data-reveal)
+		button#btnAddRecipe.right Add Recipe
+		a.close-reveal-modal &#215;
+	script(src='/javascripts/recipes.js')

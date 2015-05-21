@@ -1,0 +1,85 @@
+extends layout
+block content
+	.row
+		.large-12.columns
+			#tap1.panel.radius.tap
+				ul.button-group.right.radius
+					li
+						a.loglink.button.tiny(href="#") Log Drink
+					li
+						a.emptylink.button.tiny(href="#") Empty :(
+				h4
+					b Tap 1: 
+					span 
+				.progress.radius.round
+					span.meter.tap1(style='width: 0%;')
+					
+			#tap2.panel.radius.tap
+				ul.button-group.right.radius
+					li
+						a.loglink.button.tiny(href="#") Log Drink
+					li
+						a.emptylink.button.tiny(href="#") Empty :(
+				h4
+					b Tap 2: 
+					span 
+				.progress.radius.round
+					span.meter.tap2(style='width: 0%;')
+				
+			#tap3.panel.radius.tap
+				ul.button-group.right.radius
+					li
+						a.loglink.button.tiny(href="#") Log Drink
+					li
+						a.emptylink.button.tiny(href="#") Empty :(
+				h4
+					b Tap 3: 
+					span 
+				.progress.radius.round
+					span.meter.tap3(style='width: 0%;')
+				
+			#tap4.panel.radius.tap
+				ul.button-group.right.radius
+					li
+						a.loglink.button.tiny(href="#") Log Drink
+					li
+						a.emptylink.button.tiny(href="#") Empty :(
+				h4
+					b Tap 4: 
+					span 
+				.progress.radius.round
+					span.meter.tap4(style='width: 0%;') 
+
+
+	#modalLog.reveal-modal.full(data-reveal='')
+		h1#logTap Log a Drink?
+		a#alert-close.close-reveal-modal(href='#') ×
+		input(type="hidden")#recipeID
+		label Log a Drink
+		ul.button-group.radius.users
+			li
+				a.button.tiny.user Josh
+			li
+				a.button.tiny.user Trevva
+			li
+				a.button.tiny.user Guest
+		label Amount
+		ul.button-group.radius.ounces
+			li
+				a.button.tiny.ounce 12
+			li
+				a.button.tiny.ounce 16
+			li
+				a.button.tiny.ounce 24
+		label Log it
+		a.button.tiny.loggit(href="#") Log your drink!
+	
+	#modalEmpty.reveal-modal.small(data-reveal='')
+		h1#emptyTap Out of beer?
+		a.close-reveal-modal(href='#') ×
+		label Are you finished with this keg?
+		ul.button-group.right.radius
+			li
+				a.button#btnEmpty(href="#") Yes
+			li
+				a.button#btnEmptyCancel(href="#") No

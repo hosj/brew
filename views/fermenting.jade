@@ -1,0 +1,19 @@
+extends layout
+block content
+	#fermenting
+	
+	
+	script(src='/javascripts/fermenting.js')
+	#modalTap.reveal-modal.small(data-reveal='')
+		h1 Which Tap?
+		a#alert-close.close-reveal-modal(href='#') ×
+		input(type="hidden")#recipeID
+		ul.button-group.right.radius
+			li
+				a.button.tapnum#tap1(href='#') 1
+			li
+				a.button.tapnum#tap2(href='#') 2
+			li
+				a.button.tapnum#tap3(href='#') 3
+			li
+				a.button.tapnum#tap4(href='#') 4

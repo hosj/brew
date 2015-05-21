@@ -1,0 +1,74 @@
+extends layout
+block content
+	.row(data-equalizer)
+	
+		.large-4.columns
+			a(href='NewBrew')
+				.panel.radius(data-equalizer-watch)
+					.h3 
+						b New Brew
+					span Start a new brew 
+			
+		.large-4.columns
+			a(href='brewing')
+				.panel.radius(data-equalizer-watch)
+					.h3 
+						b Brewing
+					span Manage brews that are currently ongoing
+					
+		.large-4.columns
+			a(href='Fermenting')
+				.panel.radius(data-equalizer-watch)
+					.h3 
+						b Fermenting
+					span Brews that are currently in a bucket.
+				
+
+		
+			
+	.row(data-equalizer)
+		.large-4.columns
+			a(href='/')
+				.panel.radius(data-equalizer-watch)
+					.h3 
+						b On Tap
+					span These brews are attached to a tap.
+		.large-4.columns
+			a(href='Statistics')
+				.panel.radius(data-equalizer-watch)
+					.h3 
+						b Statistics
+					span Graphs and charts that show that you drink too much
+			
+
+		.large-4.columns
+			a(href='recipes')
+				.panel.radius(data-equalizer-watch)
+					.h3 
+						b Recipes
+					span Manage your recipes
+					
+	.row(data-equalizer)
+		.large-4.columns
+			a(href='yeast')
+				.panel.radius(data-equalizer-watch)
+					.h3 
+						b Yeast
+					span Manage Yeasts
+			
+
+		.large-4.columns
+			a(href='hops')
+				.panel.radius(data-equalizer-watch)
+					.h3 
+						b Hops
+					span Manage all the hops that are available to your recipes
+			
+
+		.large-4.columns
+			a(href='Fermentables')
+				.panel.radius(data-equalizer-watch)
+					.h3 
+						b Fermentables
+					span Manage all the fermentables that are available to your recipes
+			

@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/foundation.css')
+    link(rel='stylesheet', href='/stylesheets/foundation-icons.css')
+    script(src='/javascripts/vendor/modernizr.js')
+  body
+    nav.top-bar
+      ul.title-area
+        li.name
+          h1
+            a(href='#{link}') #{title}
+        li.toggle-topbar.menu-icon
+          a(href='#')
+            span Menu
+    br
+    #content
+        block content
+    script(src='/javascripts/vendor/jquery.js')
+    script(src='/javascripts/foundation.min.js')
+    script(src='/javascripts/vendor/moment.js')
+    script(src='/javascripts/brew.js')
+    script.
+      $(document).foundation();

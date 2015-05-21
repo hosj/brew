@@ -1,0 +1,95 @@
+extends layout
+block content
+	.row
+		.large-12.columns
+			a.button.right.tiny(data-reveal-id="addYeast") New Yeast
+			table#yeast(style="width: 100%")
+				thead
+					tr
+						th Origin
+						th Lab
+						th Type
+						th Product
+						th Temperature
+						th Attenuation
+						th Flocculation
+						th Description
+				tbody
+	#addYeast.reveal-modal.medium(data-reveal)
+		h2 Yeast Info
+		fieldset
+			.row.small-12.columns
+				.small-2.columns
+					label.right.inline(for='inputOrigin') Origin:
+				.small-10.columns 
+					input#inputOrigin(type='text', placeholder='Country')
+					
+			.row.small-12.columns
+				.small-2.columns
+					label.right.inline(for='inputLab') Lab:
+				.small-10.columns 
+					input#inputLab(type='text', placeholder='Who makes the yeast')
+					
+			.row.small-12.columns
+				.small-2.columns
+					label.right.inline(for='inputType') Type:
+				.small-10.columns 
+					select#inputType
+						option(value="Dry") Dry
+						option(value="Liquid") Liquid
+					
+			.row.small-12.columns
+				.small-2.columns
+					label.right.inline(for='inputProduct') Product:
+				.small-10.columns
+					input#inputProduct(type='text', placeholder='')
+					
+			.row.small-12.columns
+				.small-2.columns
+					label.right.inline(for='inputMinTemp') Minimum Temperature:
+				.small-10.columns
+					input#inputMinTemp(type='text', placeholder='##')
+					
+			.row.small-12.columns
+				.small-2.columns
+					label.right.inline(for='inputMaxTemp') Maximum Temperature:
+				.small-10.columns
+					input#inputMaxTemp(type='text', placeholder='##')
+					
+			.row.small-12.columns
+				.small-2.columns
+					label.right.inline(for='inputAttenuation') Attenuation:
+				.small-10.columns
+					input#inputAttenuation(type='text', placeholder='##.#')
+					
+			.row.small-12.columns
+				.small-2.columns
+					label.right.inline(for='inputFlocculation') Flocculation:
+				.small-10.columns
+					select#inputFlocculation
+						option( value="Low" ) Low
+						option( value="Medium" ) Medium
+						option( value="High" ) High
+					
+			.row.small-12.columns
+				.small-2.columns
+					label.right.inline(for='inputDesc') Description:
+				.small-10.columns
+					textarea#inputDesc
+				
+
+		button#btnAddYeast.right Add Yeast
+		a.close-reveal-modal &#215;
+		
+	#deleteYeast.reveal-modal.small(data-reveal)
+		h4 Are you sure you want to delete this yeast?
+		h1#deleteYeastName
+		input#deleteYeastID(type='hidden')
+		ul.button-group.right.radius
+			li
+				a.button#btnDeleteYeast.right(href="#") Yes
+			li
+				a.button#btnCancel.right(href="#") No
+		a.close-reveal-modal &#215;
+	
+	script(src='/javascripts/yeast.js')

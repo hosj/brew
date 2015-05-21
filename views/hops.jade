@@ -1,0 +1,58 @@
+extends layout
+block content
+	.row
+		.large-12.columns
+			a.button.right.tiny(data-reveal-id="addHop") New Hop 	
+			table#hops(style="width: 100%")
+				thead
+					tr
+						th Name
+						th Country
+						th Alpha
+						th Notes
+				tbody
+	#addHop.reveal-modal.small(data-reveal)
+		h2 Hop Info
+		fieldset
+			.row.small-12.columns
+				.small-2.columns
+					label.right.inline(for='inputName') Name
+				.small-10.columns 
+					input#inputName(type='text', placeholder='Name Your Hop')
+					
+			.row.small-12.columns
+				.small-2.columns
+					label.right.inline(for='inputCountry') Country
+				.small-10.columns
+					input#inputCountry(type='text', placeholder='Country of Origin')
+					
+			.row.small-12.columns
+				.small-2.columns
+					label.right.inline(for='inputAlpha') Alpha
+				.small-10.columns
+					input#inputAlpha(type='text', placeholder='##.#')
+
+
+			.row.small-12.columns
+				.small-2.columns
+					label.right.inline(for='inputNotes') Notes
+				.small-10.columns
+					textarea#inputDesc
+				
+
+		button#btnAddHop.right(href="#") Add Hop
+		a.close-reveal-modal &#215;
+		
+		
+	#deleteHop.reveal-modal.small(data-reveal)
+		h4 Are you sure you want to delete this hop?
+		h1#deleteHopName
+		input#deleteHopID(type='hidden')
+		ul.button-group.right.radius
+			li
+				a.button#btnDeleteHop.right(href="#") Yes
+			li
+				a.button#btnCancel.right(href="#") No		
+		a.close-reveal-modal &#215;
+		
+	script(src='/javascripts/hops.js')
